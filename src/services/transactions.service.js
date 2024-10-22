@@ -19,6 +19,11 @@ class TransactionsService{
         const mensaje = await this.model.getTransactionsSize()
         return mensaje
     }
+
+    deleteTransaction = async (id) => {
+        return this.model.deleteTransaction(id)
+    }
+
 }
 
 export default TransactionsService

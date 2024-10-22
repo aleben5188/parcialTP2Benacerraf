@@ -11,6 +11,7 @@ class TransactionsRoutes{
         this.router.get("/transactions", this.controller.getAllTransactions)
         this.router.post("/transactions", this.controller.postTransactions)
         this.router.get("/size", this.controller.getTransactionsSize)
+        this.router.delete("/transactions/delete/:id", this.controller.deleteTransaction)
 
         return this.router
     }

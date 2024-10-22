@@ -25,6 +25,12 @@ class TransactionsController {
         res.status(200).send(mensaje)
     }
 
+    deleteTransaction = async (req, res) => {
+        const { id } = req.params 
+        const deletedTransaction = await this.service.deleteTransaction(id)
+        res.send(deletedTransaction)
+    }
+
 }
 
 export default TransactionsController
